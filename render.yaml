@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: else-am-see-concept
+    runtime: node
+    region: frankfurt
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeployTrigger: commit

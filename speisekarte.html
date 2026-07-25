@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f1eee6">
+  <meta name="description" content="Die digitale Speisekarte von Else am See.">
+  <title>Speisekarte · Else am See</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body data-page="menu" class="paper-page">
+  <a class="skip-link" href="#main" data-i18n="skip">Zum Inhalt</a>
+  <div id="site-header"></div>
+
+  <main id="main" class="menu-main">
+    <header class="page-hero page-hero--menu">
+      <div>
+        <p class="eyebrow"><span>01</span> <b data-i18n="menuEyebrow">Speisen & Getränke</b></p>
+        <h1 data-i18n="menuTitle">Die Karte<br>für deinen Tag.</h1>
+      </div>
+      <div class="page-hero__aside">
+        <p data-i18n="menuIntro">Vom Frühstücksbuffet bis zum Dinner am Wasser. Wähle, entdecke und stelle deinen Seetisch zusammen.</p>
+        <div class="service-clock">
+          <span class="live-dot"></span>
+          <span data-i18n="kitchenOpen">Küche geöffnet · täglich ab 09:00</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Speisekategorien">
+      <div class="category-bar__inner" id="category-bar">
+        <button class="category-chip is-active" data-category="alle" type="button"><i data-icon="all"></i><span data-i18n="catAll">Alle</span></button>
+        <button class="category-chip" data-category="fruehstueck" type="button"><i data-icon="sun"></i><span data-i18n="catBreakfast">Frühstück</span></button>
+        <button class="category-chip" data-category="vorneweg" type="button"><i data-icon="spark"></i><span data-i18n="catStarter">Vorneweg</span></button>
+        <button class="category-chip" data-category="bowl" type="button"><i data-icon="bowl"></i><span data-i18n="catBowls">Bowls</span></button>
+        <button class="category-chip" data-category="burger" type="button"><i data-icon="burger"></i><span data-i18n="catBurger">Burger</span></button>
+        <button class="category-chip" data-category="hauptgang" type="button"><i data-icon="plate"></i><span data-i18n="catMain">Hauptgang</span></button>
+        <button class="category-chip" data-category="suess" type="button"><i data-icon="sweet"></i><span data-i18n="catSweet">Süßkram</span></button>
+      </div>
+    </nav>
+
+    <section class="menu-shell">
+      <div class="menu-counter">
+        <span id="menu-result-count">14</span>
+        <small data-i18n="menuResults">Lieblingsstücke</small>
+      </div>
+      <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="menu-note">
+      <div class="menu-note__icon">A</div>
+      <div>
+        <h2 data-i18n="allergyTitle">Du möchtest etwas anders?</h2>
+        <p data-i18n="allergyCopy">Allergien, vegan oder einfach ein Extrawunsch: Sag dem Team Bescheid. Viele Gerichte passen wir gerne an.</p>
+      </div>
+      <a href="tel:+4959239955615">05923 9955615 ↗</a>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <div id="cart-root"></div>
+</body>
+</html>

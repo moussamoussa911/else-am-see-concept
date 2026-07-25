@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#071b21">
+  <meta name="description" content="Else Flow – das digitale System hinter einem entspannten Restaurantbesuch.">
+  <title>Else Flow · Das smarte System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body data-page="flow" class="flow-page">
+  <a class="skip-link" href="#main" data-i18n="skip">Zum Inhalt</a>
+  <div id="site-header"></div>
+  <main id="main">
+    <section class="system-hero">
+      <div class="system-hero__copy">
+        <p class="eyebrow eyebrow--light"><span>01</span> <b>ELSE FLOW · DIGITALER SERVICE</b></p>
+        <h1 data-i18n="systemTitle">Weniger Wege.<br><em>Mehr Gastgeber.</em></h1>
+        <p data-i18n="systemIntro">Ein System verbindet Webseite, Reservierung, Kasse und Küche – damit das Team Zeit für Gäste hat.</p>
+        <a class="button button--sun" href="#live-demo"><span data-i18n="startDemo">Live-Ablauf starten</span><i>↓</i></a>
+      </div>
+      <div class="system-orbit" aria-hidden="true">
+        <div class="system-orbit__center">
+          <span class="brand-e">E</span>
+          <small>FLOW</small>
+        </div>
+        <div class="orbit-ring orbit-ring--one"><i class="orbit-dot"></i></div>
+        <div class="orbit-ring orbit-ring--two"><i class="orbit-dot"></i></div>
+        <span class="orbit-label orbit-label--book" data-i18n="orbitBooking">RESERVIERUNG</span>
+        <span class="orbit-label orbit-label--pos" data-i18n="orbitPos">KASSE</span>
+        <span class="orbit-label orbit-label--kitchen" data-i18n="orbitKitchen">KÜCHE</span>
+        <span class="orbit-label orbit-label--guest" data-i18n="orbitGuest">GAST</span>
+      </div>
+    </section>
+
+    <section class="system-proof section-pad">
+      <div class="system-proof__lead">
+        <p class="eyebrow"><span>02</span> <b data-i18n="oneDataFlow">Ein Datenfluss</b></p>
+        <h2 data-i18n="noDoubleTitle">Nichts doppelt.<br>Nichts vergessen.</h2>
+      </div>
+      <div class="proof-grid">
+        <article>
+          <span>01</span><i class="proof-icon">⌁</i>
+          <h3 data-i18n="proofBookingTitle">Online gebucht</h3>
+          <p data-i18n="proofBookingCopy">Tisch, Gästezahl und Anlass landen automatisch im Tagesplan.</p>
+        </article>
+        <article>
+          <span>02</span><i class="proof-icon">◎</i>
+          <h3 data-i18n="proofPosTitle">In der Kasse bereit</h3>
+          <p data-i18n="proofPosCopy">Der Tisch ist offen, Wünsche sind sichtbar und das Team sofort informiert.</p>
+        </article>
+        <article>
+          <span>03</span><i class="proof-icon">≋</i>
+          <h3 data-i18n="proofKitchenTitle">Direkt in die Küche</h3>
+          <p data-i18n="proofKitchenCopy">Bestellungen laufen sauber und priorisiert zum richtigen Posten.</p>
+        </article>
+        <article>
+          <span>04</span><i class="proof-icon">↗</i>
+          <h3 data-i18n="proofReportTitle">Klar ausgewertet</h3>
+          <p data-i18n="proofReportCopy">Umsatz, Auslastung und Renner sind ohne Tabellenchaos verfügbar.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="live-system" id="live-demo">
+      <div class="live-system__intro">
+        <p class="eyebrow eyebrow--light"><span>03</span> <b data-i18n="liveDemo">Live-Demo</b></p>
+        <h2 data-i18n="watchFlow">Beobachte,<br>wie ein Tisch läuft.</h2>
+        <p data-i18n="watchFlowCopy">Starte den Ablauf und sieh, wie eine Reservierung ohne doppeltes Tippen durch das System wandert.</p>
+        <button class="button button--sun" id="run-flow" type="button"><span data-i18n="runFlow">Ablauf starten</span><i>▶</i></button>
+      </div>
+      <div class="pos-screen">
+        <div class="pos-screen__top">
+          <div class="pos-brand"><span>E</span><b>ELSE POS</b></div>
+          <div class="pos-status"><i></i><span data-i18n="systemOnline">System online</span></div>
+          <time>19:32</time>
+        </div>
+        <div class="pos-screen__body">
+          <div class="pos-sidebar">
+            <button class="is-active"><i>⌂</i><span data-i18n="tables">Tische</span></button>
+            <button><i>▤</i><span data-i18n="orders">Bons</span></button>
+            <button><i>≋</i><span data-i18n="kitchen">Küche</span></button>
+            <button><i>◫</i><span data-i18n="reports">Berichte</span></button>
+          </div>
+          <div class="pos-content">
+            <div class="pos-content__head"><div><small data-i18n="today">HEUTE</small><strong data-i18n="lakeTerrace">Seeterrasse</strong></div><span>18 / 24 <small data-i18n="tablesOccupied">Tische belegt</small></span></div>
+            <div class="pos-tables">
+              <div class="pos-table is-served"><b>T09</b><span data-i18n="served">Serviert</span><small>89,40 €</small></div>
+              <div class="pos-table is-new" id="flow-table"><b>T12</b><span id="flow-status" data-i18n="awaitingGuest">Erwartet 19:30</span><small id="flow-value">2 Gäste</small><i class="flow-pulse"></i></div>
+              <div class="pos-table is-kitchen"><b>T14</b><span data-i18n="inKitchen">In der Küche</span><small>42,80 €</small></div>
+              <div class="pos-table"><b>T16</b><span data-i18n="free">Frei</span><small>—</small></div>
+            </div>
+            <div class="kitchen-ticket" id="kitchen-ticket">
+              <div><span>KDS · T12</span><time>00:00</time></div>
+              <strong>2× Beef Burger</strong>
+              <small>1× ohne Zwiebeln · 2× Else Fritten</small>
+              <b data-i18n="sentToKitchen">AN KÜCHE GESENDET</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="system-result section-pad">
+      <p class="eyebrow"><span>04</span> <b data-i18n="theResult">Das Ergebnis</b></p>
+      <div class="system-result__grid">
+        <h2 data-i18n="moreTimeTitle">Mehr Zeit am Gast.<br>Weniger Zeit am Gerät.</h2>
+        <div class="result-numbers">
+          <div><strong>1×</strong><span data-i18n="enterOnce">einmal erfassen</span></div>
+          <div><strong>0</strong><span data-i18n="paperChaos">Zettelchaos</span></div>
+          <div><strong>LIVE</strong><span data-i18n="overview">Überblick</span></div>
+        </div>
+      </div>
+      <div class="system-cta">
+        <div><span class="brand-e">E</span><p><strong data-i18n="readyForNext">Bereit für den nächsten Tisch?</strong><small data-i18n="guestFlowCopy">Für Gäste beginnt Else Flow mit einer einfachen Reservierung.</small></p></div>
+        <a class="button button--dark" href="reservieren.html"><span data-i18n="tryReservation">Reservierung testen</span><i>→</i></a>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <div id="cart-root"></div>
+</body>
+</html>

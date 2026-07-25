@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#071b21">
+  <meta name="description" content="In wenigen Schritten den Lieblingsplatz bei Else am See reservieren.">
+  <title>Reservieren · Else am See</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body data-page="booking" class="booking-page">
+  <a class="skip-link" href="#main" data-i18n="skip">Zum Inhalt</a>
+  <div id="site-header"></div>
+
+  <main id="main" class="booking-main">
+    <header class="booking-head">
+      <div>
+        <p class="eyebrow eyebrow--light"><span>01</span> <b data-i18n="bookingEyebrow">Reservierung</b></p>
+        <h1 data-i18n="bookingTitle">Dein Platz.<br>Dein Moment.</h1>
+      </div>
+      <p data-i18n="bookingIntro">Datum, Stimmung und Tisch wählen. Der Rest läuft automatisch.</p>
+    </header>
+
+    <div class="booking-layout">
+      <section class="booking-panel" id="booking-panel">
+        <div class="booking-progress" aria-label="Buchungsfortschritt">
+          <button type="button" class="is-active" data-book-step="1"><b>01</b><span data-i18n="stepMoment">Moment</span></button>
+          <i></i>
+          <button type="button" data-book-step="2"><b>02</b><span data-i18n="stepPlace">Platz</span></button>
+          <i></i>
+          <button type="button" data-book-step="3"><b>03</b><span data-i18n="stepDetails">Details</span></button>
+          <i></i>
+          <button type="button" data-book-step="4"><b>04</b><span data-i18n="stepDone">Fertig</span></button>
+        </div>
+
+        <div class="booking-step is-active" data-step-panel="1">
+          <div class="step-heading">
+            <span data-i18n="stepOne">Schritt 1 von 4</span>
+            <h2 data-i18n="whenQuestion">Wann sehen wir uns?</h2>
+            <p data-i18n="whenCopy">Wähle einen Tag und die Stimmung, die zu dir passt.</p>
+          </div>
+          <div class="field-label" data-i18n="chooseDate">Datum wählen</div>
+          <div class="date-strip" id="date-strip"></div>
+          <div class="field-label" data-i18n="chooseMoment">Was hast du vor?</div>
+          <div class="moment-grid">
+            <button type="button" class="moment-card is-active" data-moment="breakfast" data-start="09:00" data-end="11:30">
+              <i class="icon-sunrise"></i><span data-i18n="breakfast">Frühstück</span><small>09:00—11:30</small>
+            </button>
+            <button type="button" class="moment-card" data-moment="lunch" data-start="12:00" data-end="16:30">
+              <i class="icon-ripple"></i><span data-i18n="lunch">Lunch & Seezeit</span><small>12:00—16:30</small>
+            </button>
+            <button type="button" class="moment-card" data-moment="dinner" data-start="17:00" data-end="21:30">
+              <i class="icon-moon"></i><span data-i18n="dinner">Dinner</span><small>17:00—21:30</small>
+            </button>
+          </div>
+          <div class="field-label" data-i18n="chooseTime">Uhrzeit</div>
+          <div class="time-grid" id="time-grid"></div>
+          <div class="booking-actions">
+            <span></span>
+            <button class="button button--sun next-step" type="button"><span data-i18n="nextPlace">Weiter zum Platz</span><i>→</i></button>
+          </div>
+        </div>
+
+        <div class="booking-step" data-step-panel="2">
+          <div class="step-heading">
+            <span data-i18n="stepTwo">Schritt 2 von 4</span>
+            <h2 data-i18n="whereQuestion">Wo sitzt du am liebsten?</h2>
+            <p data-i18n="whereCopy">Wähle zuerst den Bereich und dann einen freien Tisch.</p>
+          </div>
+          <div class="party-counter">
+            <div><span data-i18n="partySize">Wie viele Personen?</span><small data-i18n="partyHint">Kinder bitte mitzählen</small></div>
+            <div class="counter-control">
+              <button type="button" data-party="-1" aria-label="Eine Person weniger">−</button>
+              <strong id="party-count">2</strong>
+              <button type="button" data-party="1" aria-label="Eine Person mehr">+</button>
+            </div>
+          </div>
+          <div class="area-tabs">
+            <button type="button" class="is-active" data-area="terrace"><span data-i18n="areaTerrace">Seeterrasse</span><small data-i18n="areaTerraceHint">draußen · überdacht</small></button>
+            <button type="button" data-area="inside"><span data-i18n="areaInside">Restaurant</span><small data-i18n="areaInsideHint">warm · nah am Fenster</small></button>
+            <button type="button" data-area="beach"><span data-i18n="areaBeach">Stranddeck</span><small data-i18n="areaBeachHint">locker · bei gutem Wetter</small></button>
+          </div>
+          <div class="table-map" id="table-map">
+            <div class="lake-edge"><span data-i18n="lake">Quendorfer See</span><i></i><i></i></div>
+            <button type="button" class="table table--round" style="--x:17%;--y:30%" data-table="T01"><span>01</span><small>2—4</small></button>
+            <button type="button" class="table table--wide is-busy" style="--x:42%;--y:23%" data-table="T02" disabled><span>02</span><small data-i18n="occupied">belegt</small></button>
+            <button type="button" class="table table--round" style="--x:72%;--y:30%" data-table="T03"><span>03</span><small>2—4</small></button>
+            <button type="button" class="table table--wide" style="--x:23%;--y:62%" data-table="T04"><span>04</span><small>4—6</small></button>
+            <button type="button" class="table table--round" style="--x:56%;--y:68%" data-table="T05"><span>05</span><small>2—4</small></button>
+            <button type="button" class="table table--wide" style="--x:78%;--y:62%" data-table="T06"><span>06</span><small>4—8</small></button>
+          </div>
+          <div class="map-legend"><span><i></i><b data-i18n="available">frei</b></span><span><i class="busy"></i><b data-i18n="occupied">belegt</b></span><span><i class="selected"></i><b data-i18n="selected">gewählt</b></span></div>
+          <div class="booking-actions">
+            <button class="back-step" type="button">← <span data-i18n="back">Zurück</span></button>
+            <button class="button button--sun next-step" type="button"><span data-i18n="nextDetails">Weiter zu Details</span><i>→</i></button>
+          </div>
+        </div>
+
+        <div class="booking-step" data-step-panel="3">
+          <div class="step-heading">
+            <span data-i18n="stepThree">Schritt 3 von 4</span>
+            <h2 data-i18n="almostDone">Fast geschafft.</h2>
+            <p data-i18n="detailsCopy">Nur noch deine Kontaktdaten und ein Wunsch, falls du einen hast.</p>
+          </div>
+          <form class="booking-form" id="booking-form">
+            <label><span data-i18n="name">Name</span><input required name="name" autocomplete="name" placeholder="Mara Mustermann"></label>
+            <label><span data-i18n="email">E-Mail</span><input required type="email" name="email" autocomplete="email" placeholder="mara@beispiel.de"></label>
+            <label><span data-i18n="phone">Telefon</span><input required type="tel" name="phone" autocomplete="tel" placeholder="+49 170 1234567"></label>
+            <label><span data-i18n="occasion">Anlass</span>
+              <select name="occasion">
+                <option value="" data-i18n="occasionNone">Einfach so</option>
+                <option data-i18n="occasionBirthday">Geburtstag</option>
+                <option data-i18n="occasionDate">Date Night</option>
+                <option data-i18n="occasionBusiness">Geschäftlich</option>
+              </select>
+            </label>
+            <label class="form-wide"><span data-i18n="wishes">Wünsche</span><textarea name="note" rows="3" data-i18n-placeholder="wishesPlaceholder" placeholder="Kinderstuhl, Allergie, besonderer Anlass …"></textarea></label>
+            <label class="check-label form-wide"><input required type="checkbox"><i></i><span data-i18n="privacyConsent">Ich stimme der Verarbeitung meiner Daten für diese Reservierungsanfrage zu.</span></label>
+          </form>
+          <div class="booking-actions">
+            <button class="back-step" type="button">← <span data-i18n="back">Zurück</span></button>
+            <button class="button button--sun" type="submit" form="booking-form"><span data-i18n="confirmReservation">Reservierung bestätigen</span><i>✓</i></button>
+          </div>
+        </div>
+
+        <div class="booking-step booking-success" data-step-panel="4">
+          <div class="success-ripple"><i></i><i></i><span>✓</span></div>
+          <p class="eyebrow eyebrow--light"><span>04</span> <b data-i18n="requestPrepared">Anfrage vorbereitet</b></p>
+          <h2 data-i18n="seeYou">Bis gleich<br>am See.</h2>
+          <p data-i18n="successCopy">Diese Konzeptdemo sendet keine echte Buchung. In der Live-Version landet sie sofort im Reservierungs- und Kassensystem.</p>
+          <div class="success-ticket" id="success-ticket"></div>
+          <div class="pos-handoff">
+            <div class="pos-handoff__icon">E</div>
+            <div><strong data-i18n="posHandoffTitle">Automatisch im System</strong><span data-i18n="posHandoffCopy">Tisch, Gästezahl und Wünsche sind direkt für Service und Küche bereit.</span></div>
+            <b>LIVE</b>
+          </div>
+          <a class="button button--sun" href="speisekarte.html"><span data-i18n="buildTable">Seetisch zusammenstellen</span><i>→</i></a>
+        </div>
+      </section>
+
+      <aside class="booking-summary">
+        <div class="booking-summary__head">
+          <span data-i18n="yourReservation">Deine Reservierung</span>
+          <b id="summary-status" data-i18n="notComplete">noch unvollständig</b>
+        </div>
+        <div class="summary-visual">
+          <img src="assets/terrace-night.jpg" alt="">
+          <span data-i18n="areaTerrace">Seeterrasse</span>
+        </div>
+        <dl>
+          <div><dt data-i18n="summaryDate">Datum</dt><dd id="summary-date">—</dd></div>
+          <div><dt data-i18n="summaryTime">Uhrzeit</dt><dd id="summary-time">—</dd></div>
+          <div><dt data-i18n="summaryGuests">Gäste</dt><dd id="summary-guests">2</dd></div>
+          <div><dt data-i18n="summaryTable">Tisch</dt><dd id="summary-table">—</dd></div>
+        </dl>
+        <div class="summary-note">
+          <i>i</i><p data-i18n="summaryNote">Keine Kreditkarte nötig. Du erhältst nach der echten Buchung direkt eine Bestätigung.</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <div id="cart-root"></div>
+</body>
+</html>

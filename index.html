@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#071b21">
+  <meta name="description" content="Else am See – Frühstück, Dinner und Strandgefühl direkt am Quendorfer See.">
+  <title>Else am See · Kurzurlaub am Wasser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main" data-i18n="skip">Zum Inhalt</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="home-hero">
+      <div class="home-hero__media" aria-hidden="true">
+        <img src="assets/hero-night.jpg" alt="">
+        <div class="home-hero__veil"></div>
+        <div class="water-lines"><i></i><i></i><i></i></div>
+      </div>
+      <div class="home-hero__content">
+        <div class="hero-kicker reveal">
+          <span class="live-dot"></span>
+          <span data-i18n="openToday">Heute ab 09:00 Uhr</span>
+          <span class="hero-kicker__line"></span>
+          <span>Quendorfer See</span>
+        </div>
+        <h1 class="hero-title reveal">
+          <span data-i18n="heroLine1">Vom ersten</span>
+          <em data-i18n="heroLine2">Kaffee</em>
+          <span data-i18n="heroLine3">bis zum letzten</span>
+          <em data-i18n="heroLine4">Licht.</em>
+        </h1>
+        <p class="hero-copy reveal" data-i18n="heroCopy">Frühstück, Lieblingsgerichte und lange Abende – direkt am Wasser.</p>
+        <div class="hero-actions reveal">
+          <a class="button button--sun" href="reservieren.html">
+            <span data-i18n="reserveTable">Tisch reservieren</span>
+            <i>→</i>
+          </a>
+          <a class="text-link" href="speisekarte.html">
+            <span data-i18n="discoverMenu">Speisekarte entdecken</span>
+            <i>↗</i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-temperature">
+        <span class="hero-temperature__number">09—∞</span>
+        <span data-i18n="allDay">Ein Ort für den ganzen Tag</span>
+      </div>
+      <button class="sound-toggle" type="button" aria-label="Ambiente Animation pausieren">
+        <span></span><span></span><span></span><span></span>
+      </button>
+    </section>
+
+    <section class="dayline section-pad">
+      <div class="section-intro reveal">
+        <p class="eyebrow"><span>01</span> <b data-i18n="dayEyebrow">Dein Tag bei Else</b></p>
+        <h2 data-i18n="dayTitle">Drei Stimmungen.<br>Ein Lieblingsplatz.</h2>
+      </div>
+      <div class="dayline__rail">
+        <article class="day-card day-card--morning reveal">
+          <div class="day-card__time">09:00</div>
+          <div class="day-card__icon icon-sunrise"></div>
+          <h3 data-i18n="morningTitle">Morgen am See</h3>
+          <p data-i18n="morningCopy">Buffet, frischer Kaffee und Ruhe vor dem Tag.</p>
+          <a href="speisekarte.html?cat=fruehstueck" data-i18n="showBreakfast">Frühstück ansehen →</a>
+        </article>
+        <article class="day-card day-card--afternoon reveal">
+          <div class="day-card__time">14:30</div>
+          <div class="day-card__icon icon-ripple"></div>
+          <h3 data-i18n="afternoonTitle">Zeit verlieren</h3>
+          <p data-i18n="afternoonCopy">Kleinkram, Süßes und ein Platz ganz nah am Wasser.</p>
+          <a href="speisekarte.html?cat=vorneweg" data-i18n="showSnacks">Lieblingsstücke →</a>
+        </article>
+        <article class="day-card day-card--evening reveal">
+          <div class="day-card__time">19:45</div>
+          <div class="day-card__icon icon-moon"></div>
+          <h3 data-i18n="eveningTitle">Lichterabend</h3>
+          <p data-i18n="eveningCopy">Dinner, Drinks und Seeblick ohne Zeitgefühl.</p>
+          <a href="reservieren.html" data-i18n="secureEvening">Abend sichern →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="manifesto">
+      <div class="manifesto__image">
+        <img src="assets/table-lake.jpg" alt="Tisch mit Blick auf den Quendorfer See" loading="lazy">
+        <span class="image-label">52.3356° N · 7.2184° E</span>
+      </div>
+      <div class="manifesto__copy">
+        <p class="eyebrow"><span>02</span> <b data-i18n="placeEyebrow">Else ist ein Gefühl</b></p>
+        <h2 data-i18n="placeTitle">Kurzurlaub.<br>Direkt am Tisch.</h2>
+        <p data-i18n="placeCopy">Zwischen Wasser, Holz und warmem Licht wird aus „nur kurz essen“ schnell ein ganzer Abend.</p>
+        <div class="manifesto__facts">
+          <div><strong>360°</strong><span data-i18n="lakeFeeling">Seegefühl</span></div>
+          <div><strong>09—∞</strong><span data-i18n="dayToNight">von früh bis spät</span></div>
+          <div><strong>1</strong><span data-i18n="favoritePlace">Lieblingsplatz</span></div>
+        </div>
+        <a class="button button--outline" href="am-see.html"><span data-i18n="meetElse">Else kennenlernen</span><i>→</i></a>
+      </div>
+    </section>
+
+    <section class="taste-feature section-pad">
+      <div class="taste-feature__top">
+        <p class="eyebrow"><span>03</span> <b data-i18n="favorites">Favoriten am Tisch</b></p>
+        <a class="text-link text-link--dark" href="speisekarte.html"><span data-i18n="wholeMenu">Ganze Karte</span><i>↗</i></a>
+      </div>
+      <div class="taste-stage">
+        <div class="taste-stage__image reveal">
+          <img src="assets/burger.jpg" alt="Else Burger mit Fritten und Drink" loading="lazy">
+          <div class="taste-stage__stamp"><span data-i18n="handmade">handmade</span><strong>ELSE</strong></div>
+        </div>
+        <div class="taste-stage__copy reveal">
+          <span class="menu-no">04 / 12</span>
+          <p class="eyebrow-text">HANDMADE BURGER</p>
+          <h2 data-i18n="burgerTitle">Münsterland<br>im Dinkelbun.</h2>
+          <p data-i18n="burgerCopy">Saftiges Rind, Cheddar, Bacon, Schmorzwiebeln und Elses Burgersauce.</p>
+          <div class="dish-price">15,90 €</div>
+          <button class="add-preview" type="button" data-add="beef-single">
+            <span data-i18n="addToLakeTable">Zum Seetisch hinzufügen</span><i>+</i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="flow-teaser">
+      <div class="flow-teaser__grid">
+        <div>
+          <p class="eyebrow eyebrow--light"><span>04</span> <b>ELSE FLOW</b></p>
+          <h2 data-i18n="flowTeaserTitle">Ein Abend.<br>Ein smarter Ablauf.</h2>
+        </div>
+        <p data-i18n="flowTeaserCopy">Reservierung, Tisch, Bestellung und Küche sprechen miteinander. Für Gäste unsichtbar – für das Team unbezahlbar.</p>
+      </div>
+      <div class="flow-strip" aria-label="Digitaler Serviceablauf">
+        <div class="flow-node is-active"><i>✓</i><span data-i18n="flowReserved">Reserviert</span><small>19:30 · T12</small></div>
+        <div class="flow-connector"><b></b></div>
+        <div class="flow-node"><i>⌁</i><span data-i18n="flowPos">Kasse</span><small>2 Gäste</small></div>
+        <div class="flow-connector"><b></b></div>
+        <div class="flow-node"><i>≋</i><span data-i18n="flowKitchen">Küche</span><small data-i18n="flowInPrep">In Zubereitung</small></div>
+        <div class="flow-connector"><b></b></div>
+        <div class="flow-node"><i>◎</i><span data-i18n="flowServed">Serviert</span><small>19:46</small></div>
+      </div>
+      <a class="button button--sun" href="else-flow.html"><span data-i18n="seeSystem">System erleben</span><i>→</i></a>
+    </section>
+
+    <section class="booking-poster">
+      <img src="assets/terrace-night.jpg" alt="Beleuchtete Seeterrasse am Abend" loading="lazy">
+      <div class="booking-poster__veil"></div>
+      <div class="booking-poster__copy">
+        <p class="eyebrow eyebrow--light"><span>05</span> <b data-i18n="yourEvening">Dein Abend am Wasser</b></p>
+        <h2 data-i18n="bookingPosterTitle">Das Licht ist gut.<br>Der Tisch fehlt noch.</h2>
+        <a class="button button--sun" href="reservieren.html"><span data-i18n="choosePlace">Lieblingsplatz wählen</span><i>→</i></a>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <div id="cart-root"></div>
+</body>
+</html>
