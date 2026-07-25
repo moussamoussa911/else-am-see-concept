@@ -680,13 +680,10 @@ p {
   display: flex;
   max-width: 900px;
   margin-bottom: 28px;
-  flex-wrap: wrap;
-  column-gap: .17em;
-  font-family: var(--font-display);
-  font-size: clamp(61px, 9.1vw, 148px);
-  font-weight: 300;
-  letter-spacing: -.055em;
-  line-height: .78;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: clamp(60px, 8vw, 126px);
+  line-height: .82;
 }
 
 .hero-title span,
@@ -695,9 +692,20 @@ p {
   white-space: nowrap;
 }
 
+.hero-title span {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  letter-spacing: -.075em;
+}
+
 .hero-title em {
+  margin-top: .07em;
   color: var(--sun);
-  font-weight: 300;
+  font-family: var(--font-display);
+  font-size: 1.08em;
+  font-weight: 400;
+  letter-spacing: -.055em;
+  line-height: .82;
 }
 
 .hero-copy {
@@ -3989,13 +3997,19 @@ p {
 
   .hero-title {
     display: block;
-    font-size: clamp(60px, 17vw, 92px);
-    line-height: .78;
+    font-size: clamp(57px, 15.2vw, 78px);
+    line-height: .88;
   }
 
   .hero-title span,
   .hero-title em {
-    white-space: normal;
+    white-space: nowrap;
+  }
+
+  .hero-title em {
+    margin-top: .08em;
+    font-size: .98em;
+    line-height: .9;
   }
 
   .hero-copy {
@@ -4393,7 +4407,7 @@ p {
   }
 
   .hero-title {
-    font-size: clamp(55px, 16.8vw, 78px);
+    font-size: clamp(54px, 14.8vw, 72px);
   }
 
   .section-pad {
